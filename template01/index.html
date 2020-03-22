@@ -5,6 +5,7 @@
     <meta name="description" content="to jest szablon do projektu."> <!-- do pominięcia, bo dzis google to omija -->
     <title>Nasz projekt</title>
     <link rel="stylesheet" href="my-app.css">
+    <script src="my.js"></script> <!-- teraz nie zadziała bo sie ładuje zanim wczyta reszte strony i nie moze zrobic zmiany na elemencie id:tytul bo jeszcze on nie istnieje-->
   </head>
   <body>
     <header style="width:50%">
@@ -49,5 +50,9 @@
       <footer>&copy; &trade; Stopka</footer>
     </sectiion>
   </body>
+  <!-- dopiero tutaj skrypt bo jak bysmy dali w header to element o id tytyl jeszcze nie istnieje bo strona jest renderowana z gory d odolu-->
+  <!-- <script> 
+    document.getElementById('tytul').innerHTML="nowa tresc tytulu";
+  </script> -->
 </html>
 
