@@ -8,14 +8,14 @@
     <script src="my.js"></script> <!-- teraz nie zadziała bo sie ładuje zanim wczyta reszte strony i nie moze zrobic zmiany na elemencie id:tytul bo jeszcze on nie istnieje-->
   </head>
   <body>
-    <header style="width:50%">
+    <header>
         <h1 id="tytul">HTML</h1> 
         <h1 > Drugi raz naglowek H1</h1> 
         <h2 class="subtytul">Informacje o HTML</h2>
     </header>
   
     <section>
-      <nav style="color: orange;">  Nawigacja menu   
+      <nav>  Nawigacja menu   
         <br><a href="listy.html" target="_self">Listy</a>
         <br><a href="formularze.html" target="_self">Formularze</a>
       </nav>
@@ -42,7 +42,7 @@
           <br><a href="http://www.google.com" target="_top">kliknij tutaj, sprwadz do czego </a>
         </div>
 
-        <div style="width:50%">
+        <div id="summary">
           <br>HTML umożliwia określenie wyglądu dokumentu w przeglądarce internetowej. Do szczegółowego opisu formatowania akapitów, nagłówków, użytych czcionek i kolorów, &amp; zalecane jest wykorzystywanie kaskadowych arkuszy stylów.</p>
           <img src="logo.png" height="100" title="jest to logo html" alt="html logo"> <!-- height="100"  width="100"  w pixelach-->      
         </div>
