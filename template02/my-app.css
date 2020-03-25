@@ -55,6 +55,30 @@ h2.subtitle {
     background-color: royalblue;
 }
 
+#test5{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    transition: width 2s, height 2s, background-color 2s;
+}
+
+#test5:hover{
+    width: 200px;
+    height: 200px;
+    /* transition: width 2s; */
+    background-color:  yellowgreen;
+}
+
+#test2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(200, 255, 0);
+    transition: width 2s ease-out 1s; /* 1s - delay * spowalnia na koncu */
+}
+
+#test2:hover{
+    width: 400px;
+}
 
 /* position
 1. static - domyslnie
