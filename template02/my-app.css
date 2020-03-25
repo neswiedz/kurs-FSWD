@@ -40,12 +40,17 @@ h2.subtitle {
 #summary{
     width:50%;
 }
+#naszheader{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
 .numberfloat{
-    width: 24%;
-    float: left;
-    text-align: center;
-    border: 1px solid white;
+    width:100px;
+    height: 80px;
+    background-color: royalblue;
     
 }
 
