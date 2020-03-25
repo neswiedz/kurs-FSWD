@@ -55,11 +55,25 @@ h2.subtitle {
     background-color: royalblue;
 }
 
+@keyframes probna {
+    from {background-color: red; width: 200px }
+    to {background-color: green;}
+}
+
+@keyframes probna2 {
+    0% {background-color: red; width: 200px }
+    50% {background-color: yellow; width: 300px}
+    100% {background-color: green;}
+
+}
+
 #test5{
     width: 100px;
     height: 100px;
     background-color: aqua;
-    transition: width 2s, height 2s, background-color 2s;
+    /* transition: width 2s, height 2s, background-color 2s; */
+    animation-name: probna2;
+    animation-duration: 4s;
 }
 
 #test5:hover{
