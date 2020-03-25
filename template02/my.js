@@ -1,1 +1,1 @@
-document.getElementById('tytul').innerHTML="nowa tresc tytulu";
+document.getElementById('title').innerHTML="nowa tresc titleu";

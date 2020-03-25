@@ -1,58 +1,78 @@
 <!doctype html>
 <html lang="pl">
+
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="to jest szablon do projektu."> <!-- do pominięcia, bo dzis google to omija -->
-    <title>Nasz projekt</title>
+    <meta name="description" content="This can be use as template"> <!-- do pominięcia, bo dzis google to omija -->
+    <title>Our example project</title>
     <link rel="stylesheet" href="my-app.css">
-    <script src="my.js"></script> <!-- teraz nie zadziała bo sie ładuje zanim wczyta reszte strony i nie moze zrobic zmiany na elemencie id:tytul bo jeszcze on nie istnieje-->
+    <script src="my.js"></script> <!-- teraz nie zadziała bo sie ładuje zanim wczyta reszte strony i nie moze zrobic zmiany na elemencie id:title bo jeszcze on nie istnieje-->
   </head>
+
   <body>
     <header>
-        <h1 id="tytul">HTML</h1> 
-        <h1 > Drugi raz naglowek H1</h1> 
-        <h2 class="subtytul">Informacje o HTML</h2>
-    </header>
+        <h1 id="main-title">HTML huge title (h1)</h1> 
+        <h1 > Headings again (h1)</h1> 
+        <h2>Information about HTML</h2>
+        <div class="numberfloat">1</div>
+        <div class="numberfloat">2</div>
+        <div class="numberfloat">3</div>
+        <div class="numberfloat">4</div>
+      </header>
   
+      
     <section>
-      <nav>  Nawigacja menu   
-        <br><a href="listy.html" target="_self">Listy</a>
-        <br><a href="formularze.html" target="_self">Formularze</a>
+      <nav>  Navigation menu   
+        <br><a href="listy.html" target="_self">Lists</a>
+        <br><a href="formularze.html" target="_self">Forms</a>
       </nav>
-      <br>
+      
       <aside>  Sidebar    </aside>
       
       <article> <!-- czesc ktora mozna wyjac z naszej strony i bedzie to samoistny element-->
-        <p>HTML pozwala opisać strukturę informacji zawartych wewnątrz strony internetowej, nadając odpowiednie znaczenie semantyczne poszczególnym fragmentom tekstu – formując hiperłącza, akapity, nagłówki, listy <br> oraz osadza w tekście dokumentu obiekty plikowe np. multimedia bądź elementy baz danych np. interaktywne formularze danych. </p>
-        <p>Kody do użycia w htmlu:
+        <div id="par">
+          
+          <p>HTML pozwala opisać strukturę informacji zawartych wewnątrz strony internetowej, nadając odpowiednie znaczenie semantyczne poszczególnym fragmentom tekstu – formując hiperłącza, akapity, nagłówki, listy <br> oraz osadza w tekście dokumentu obiekty plikowe np. multimedia bądź elementy baz danych np. interaktywne formularze danych. </p>
+        </div>
+        
+        <div>
+          How to use HTML codes:
           <br><a href="http://ascii.cl/htmlcodes.htm" target="_blank"> http://ascii.cl/htmlcodes.htm</a>
-        </p>
-        <p>Specjal codes:
-          <br> &#35;
-          <br> '&nbsp;'<!-- spacja -->
-          <br> &lt;
-          <br> &copy; 
-          <br> &trade; 
-        </p>
-
-        <div> Links:
+          <p>Specjal characters and symbols:
+            <br> &#35;
+            <br> '&nbsp;'<!-- sapcebar -->
+            <br> &lt;
+            <br> &copy; 
+            <br> &trade; 
+          </p>
+        </div>
+          
+        <div id="links-target"> Links target types:
           <br><a href="http://www.google.com" target="_self">kliknij tutaj, otwórz w tym samym oknie</a>
           <br><a href="http://www.google.com" target="_blank">kliknij tutaj otwórz w nowym oknie </a>
           <br><a href="http://www.google.com" target="_parent">kliknij tutaj, sprwadz do czego  </a>
           <br><a href="http://www.google.com" target="_top">kliknij tutaj, sprwadz do czego </a>
+        </div> 
+        <div id="links-usefull">
+          Usefull links:
+          <br><a href="http://www.w3.org" target="_blank">www.w3.org</a>
+          <br><a href="http://www.ascii.cl/htmlcodes.htm" target="_blank">www.ascii.cl/htmlcodes.htm</a>
+          <br><a href="http://fonts.google.com" target="_blank">http://fonts.google.com</a>
+          <br><a href="http://fontawesome.com" target="_blank">http://fontawesome.com</a>
         </div>
-
+        
+        
         <div id="summary">
           <br>HTML umożliwia określenie wyglądu dokumentu w przeglądarce internetowej. Do szczegółowego opisu formatowania akapitów, nagłówków, użytych czcionek i kolorów, &amp; zalecane jest wykorzystywanie kaskadowych arkuszy stylów.</p>
           <img src="logo.png" height="100" title="jest to logo html" alt="html logo"> <!-- height="100"  width="100"  w pixelach-->      
         </div>
       </article>
-      <footer>&copy; &trade; Stopka</footer>
     </sectiion>
+    <footer>&copy; &trade; Stopka</footer>
   </body>
   <!-- dopiero tutaj skrypt bo jak bysmy dali w header to element o id tytyl jeszcze nie istnieje bo strona jest renderowana z gory d odolu-->
   <!-- <script> 
-    document.getElementById('tytul').innerHTML="nowa tresc tytulu";
+    document.getElementById('title').innerHTML="nowa tresc titleu";
   </script> -->
 </html>
 
