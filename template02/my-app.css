@@ -1,9 +1,11 @@
 body {
     background-color: grey;
+    --glowny-kolor: rgb(175,6,6);
+    /* --nazwa_zmiennej, zasieg zmiennej do elementu gdzie zdefiniowany */
 }
 
 #par{
-    border: 1px double red;
+    border: 1px double var(--glowny-kolor);
     background-image: url(logo.png);
     background-size:  100px;
     background-repeat: no-repeat;
@@ -14,7 +16,7 @@ body {
 }
 
 #par p::first-letter {
-    color: #ff0000;
+    color: #var(--glowny-kolor);
     font-size: 36px;
 }
 
@@ -30,7 +32,7 @@ h2 {
 
 h2.subtitle { 
     /* elementy gdzie: selektor h2 oraz klasy subtitle */
-    background-color: indianred;
+    background-color: var(--glowny-kolor);
 }
 
 #links-target{
@@ -42,7 +44,7 @@ h2.subtitle {
 }
 #naszheader{
     height: 300px;
-    border: 1px solid red;
+    border: 1px solid var(--glowny-kolor);
     display: grid;
     grid-gap: 10px; /* odlegosc miedzy wierszami */
     grid-template-columns: auto 100px auto;  /* w zaleznosci ile razy wpiszemy "auto" to tyle kolumn bedzie,
@@ -56,12 +58,12 @@ h2.subtitle {
 }
 
 @keyframes probna {
-    from {background-color: red; width: 200px }
+    from {background-color: var(-glowny-kolor); width: 200px }
     to {background-color: green;}
 }
 
 @keyframes probna2 {
-    0% {background-color: red; width: 200px }
+    0% {background-color: var(-glowny-kolor); width: 200px }
     50% {background-color: yellow; width: 300px}
     100% {background-color: green;}
 
@@ -93,7 +95,14 @@ h2.subtitle {
 #test2:hover{
     width: 400px;
 }
+/* tylko zastosowanie do bezposrednich dzieci elementu czyli tylko te a ktore sa bezposrednio w nazwasekcji a nie ma poziomow posrednich */
+#nazwasekcji > a {
+    color:red;
+}
 
+/* wszystkie bezposrednie dzieci */
+#nazwasekcji > * {
+}
 /* position
 1. static - domyslnie
 
