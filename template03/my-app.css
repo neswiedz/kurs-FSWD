@@ -1,168 +1,146 @@
 body {
-    background-color: grey;
-    --glowny-kolor: rgb(175,6,6);
+    margin: 0;
+    background-color: rgb(156, 182, 68);
+    --glowny-kolor: rgb(156, 182, 68);
+    --main_section_green_text: rgb(125, 153, 15);
     /* --nazwa_zmiennej, zasieg zmiennej do elementu gdzie zdefiniowany */
+    font-family: 'Open Sans', sans-serif;
 }
 
-#par{
-    border: 1px double var(--glowny-kolor);
-    background-image: url(logo.png);
-    background-size:  100px;
-    background-repeat: no-repeat;
-    background-position: left;
-    background-color: aliceblue;
-    padding: 10px 5px 10px 120px;
-    /* margin: 30px; */
+#MainHeader {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin: 10px 0;
 }
 
-#par p::first-letter {
-    color: #var(--glowny-kolor);
-    font-size: 36px;
+#HeaderContainer{
+    width: 70%;
+    margin: auto; /*to powoduje ze  
+    HeaderContainet jako dziecko Main Headera 
+    gdzie display: flex, margin auto u dziecka 
+    ustawia go na srodku*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-h1 {
-    color: blue;
-    font-family: fantasy;
-}
-
-h2 {
-    color: rgba(69, 69, 194, 0.5);
-    /* ostatni to kanał alpha */
-}
-
-h2.subtitle { 
-    /* elementy gdzie: selektor h2 oraz klasy subtitle */
+#HeaderContainer button{
+    border:0; 
+    border-radius: 4px;
+    height:30px;
+    min-width: 80px;
+    text-decoration: none;
     background-color: var(--glowny-kolor);
+    color: white; 
 }
 
-#links-target{
-    color:rgb(48, 128, 160);
+#HeaderContainer button:hover{
+    background-color: white;
+    background-image: linear-gradient(white, rgb(201, 201, 201));
+    transition-duration: 1s;
+    color: rgb(156,182,68) !important;
 }
 
-#summary{
-    width:50%;
-}
-#naszheader{
-    height: 300px;
-    border: 1px solid var(--glowny-kolor);
-    display: grid;
-    grid-gap: 10px; /* odlegosc miedzy wierszami */
-    grid-template-columns: auto 100px auto;  /* w zaleznosci ile razy wpiszemy "auto" to tyle kolumn bedzie,
-    aut omozna tez zamienic na szerokosc kolumny  */
-    /* patrz tez w elementach z 1 i 2 sa dodane style w html definujace szerokosc pierwszego elementu na cala szerokosc strony grid-column:  1/5; oraz drugiego jako grid-row: 2/4  */
+.main_baner {
+    max-width:100%;
+    height: 100%;
 }
 
-.numberfloat{
-    border: 1px solid black;
-    background-color: royalblue;
+.main_baner img{
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0;
+    margin: -5px 0;
 }
 
-@keyframes probna {
-    from {background-color: var(-glowny-kolor); width: 200px }
-    to {background-color: green;}
+/* SEKCJA GLOWNA */
+#main_section{
+    background-color: rgb(80,80,80);  
+    display: flex;
+    color: white;
+    font-size:14px;
+    padding:  2% 0;
 }
 
-@keyframes probna2 {
-    0% {background-color: var(-glowny-kolor); width: 200px }
-    50% {background-color: yellow; width: 300px}
-    100% {background-color: green;}
-
+#main_section a{
+    color: var(--main_section_green_text) ;
+    text-decoration: none;
 }
 
-#test5{
-    width: 100px;
-    height: 100px;
-    background-color: aqua;
-    /* transition: width 2s, height 2s, background-color 2s; */
-    animation-name: probna2;
-    animation-duration: 4s;
+#main_section h2 {
+    color: var(--main_section_green_text) ;
+    font-family: 'Open Sans'; 
+    font-style: light;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+#main_section p{
+    margin-top: 0;
 }
 
-#test5:hover{
-    width: 200px;
-    height: 200px;
-    /* transition: width 2s; */
-    background-color:  yellowgreen;
+#main_section_left{
+    width: 50%;
+    flex-wrap: wrap;
+    padding: 0 5%;
 }
 
-#test2{
-    width: 100px;
-    height: 100px;
-    background-color: rgb(200, 255, 0);
-    transition: width 2s ease-out 1s; /* 1s - delay * spowalnia na koncu */
+#main_section_right{
+    display:flex;
+    width: 50%;
+    display: flex;
+    padding: 0 5%;
+    margin:auto;
+    max-width:100%;
 }
 
-#test2:hover{
-    width: 400px;
-}
-/* tylko zastosowanie do bezposrednich dzieci elementu czyli tylko te a ktore sa bezposrednio w nazwasekcji a nie ma poziomow posrednich */
-#nazwasekcji > a {
-    color:red;
+#main_section_right img{
+    margin: auto 0;
+    width: 150%;
+    max-width: 140px;
 }
 
-/* wszystkie bezposrednie dzieci */
-#nazwasekcji > * {
+#pic{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
 }
-/* position
-1. static - domyslnie
 
-2. relative - relatywna wtedy mozna uzyc top: 50px - relatywnie od miejsca gdzie byl by normalnie umieszczony przesuwamy w top lub bottom o iles pikseli
+#pic .graphics-square {
+    margin: auto; 
+    padding: 0 0;
+    max-height: 100%;
+    box-shadow: 5px 0 50px #7c7c7c;
+}
+#pic .graphics-square img {
+    width: 100%;
+}
 
-3. fixed - przytwierdzony do storny bottom, left liczone od konca strony, 
-moze nachodzic na inne elementy
+#mainFooter{
+    display: flex;
+    flex-direction: row;
+    font-size: 8px;
+    align-items: center;
+    justify-items: center;
+    margin: -5px 0;
+    padding: 10px 0;
+    color: white;
+}
 
-4. absolute - on szuka rodzica i odnosic sie bedzie od elementu rodzica np. 50 px tak jak fixed tylko ze nie od krawedzi strony tylko krawedzi rodzica
+#FooterContainer{
+    width: 70%;
+    margin: auto; /*to powoduje ze  
+    HeaderContainet jako dziecko Main Headera 
+    gdzie display: flex, margin auto u dziecka 
+    ustawia go na srodku*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
-5. sticky (nie wszystkie przegladarki obsluguja bo nowe) - gdy zacznie przewijac w dol to on przyklei sie do gory krawedzi (np. dla banerow z nawigacja) - jak zablokowane wiersze excela
-
-*/
-
-/* overflow: hidden - co nie miesci sie w boxie to zostanie ukryte
-   scroll - wewnatrz bedzie scrollbar i mozliwe przewijane
-   auto - przegladarka decyduje
-
-
- */
-
- /* #par:hover {}
- pseudo klasa hover do elementu par - do zmiany np kolorou tla po najechaniu myszka  
- :hover
- :visited
-
- a{ color:red;}
- a:visited {color:green;}
- a:active - ktora podstrona z menu jest właczona
- */
-
- /* pseudo klasa dla elementu o id dodajemy podzbior selektorow */
-/* #par p::first-letter {
-    color: #ff0000;
-    font-size: 36px;
-} */
-
-/* inline(1000), id(100), class(10), elementy(1)
-<body>
-    <header>
-        <div id="par">
-
-1      1    100 = 102
-
-<body>
-    <header id="naszheader">
-        <div id="par">
-  1    1+100   100 = 202 
-  
-  body header#naszheader #par {
-      color:blue;
-  ś}
-*/
-
-/* zalecane relatywne jednostki nie absolutne */
-/* przy width trzeba uwazac bo jestli jest padding i margin to czesc pojdzie na marginesy */
-/* em - 1em - wielkosc elementu x2 , 2em wielkosc elementu x2  standardowo chyba czcionka ma 16px*/
-
-/* css box-shadow: w praco w dol rozmycie kolor 
-box-shadow: 10px 10px 5px #000000 
-
-text-shadow: 2px 2px 3px black*/
-
+#FooterContainer i{
+    font-size: 1.5em;
+}
+#FooterContainer h3{
+    font-size: 16px;
+}
