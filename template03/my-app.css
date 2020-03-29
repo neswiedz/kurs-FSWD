@@ -1,0 +1,168 @@
+body {
+    background-color: grey;
+    --glowny-kolor: rgb(175,6,6);
+    /* --nazwa_zmiennej, zasieg zmiennej do elementu gdzie zdefiniowany */
+}
+
+#par{
+    border: 1px double var(--glowny-kolor);
+    background-image: url(logo.png);
+    background-size:  100px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: aliceblue;
+    padding: 10px 5px 10px 120px;
+    /* margin: 30px; */
+}
+
+#par p::first-letter {
+    color: #var(--glowny-kolor);
+    font-size: 36px;
+}
+
+h1 {
+    color: blue;
+    font-family: fantasy;
+}
+
+h2 {
+    color: rgba(69, 69, 194, 0.5);
+    /* ostatni to kanał alpha */
+}
+
+h2.subtitle { 
+    /* elementy gdzie: selektor h2 oraz klasy subtitle */
+    background-color: var(--glowny-kolor);
+}
+
+#links-target{
+    color:rgb(48, 128, 160);
+}
+
+#summary{
+    width:50%;
+}
+#naszheader{
+    height: 300px;
+    border: 1px solid var(--glowny-kolor);
+    display: grid;
+    grid-gap: 10px; /* odlegosc miedzy wierszami */
+    grid-template-columns: auto 100px auto;  /* w zaleznosci ile razy wpiszemy "auto" to tyle kolumn bedzie,
+    aut omozna tez zamienic na szerokosc kolumny  */
+    /* patrz tez w elementach z 1 i 2 sa dodane style w html definujace szerokosc pierwszego elementu na cala szerokosc strony grid-column:  1/5; oraz drugiego jako grid-row: 2/4  */
+}
+
+.numberfloat{
+    border: 1px solid black;
+    background-color: royalblue;
+}
+
+@keyframes probna {
+    from {background-color: var(-glowny-kolor); width: 200px }
+    to {background-color: green;}
+}
+
+@keyframes probna2 {
+    0% {background-color: var(-glowny-kolor); width: 200px }
+    50% {background-color: yellow; width: 300px}
+    100% {background-color: green;}
+
+}
+
+#test5{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    /* transition: width 2s, height 2s, background-color 2s; */
+    animation-name: probna2;
+    animation-duration: 4s;
+}
+
+#test5:hover{
+    width: 200px;
+    height: 200px;
+    /* transition: width 2s; */
+    background-color:  yellowgreen;
+}
+
+#test2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(200, 255, 0);
+    transition: width 2s ease-out 1s; /* 1s - delay * spowalnia na koncu */
+}
+
+#test2:hover{
+    width: 400px;
+}
+/* tylko zastosowanie do bezposrednich dzieci elementu czyli tylko te a ktore sa bezposrednio w nazwasekcji a nie ma poziomow posrednich */
+#nazwasekcji > a {
+    color:red;
+}
+
+/* wszystkie bezposrednie dzieci */
+#nazwasekcji > * {
+}
+/* position
+1. static - domyslnie
+
+2. relative - relatywna wtedy mozna uzyc top: 50px - relatywnie od miejsca gdzie byl by normalnie umieszczony przesuwamy w top lub bottom o iles pikseli
+
+3. fixed - przytwierdzony do storny bottom, left liczone od konca strony, 
+moze nachodzic na inne elementy
+
+4. absolute - on szuka rodzica i odnosic sie bedzie od elementu rodzica np. 50 px tak jak fixed tylko ze nie od krawedzi strony tylko krawedzi rodzica
+
+5. sticky (nie wszystkie przegladarki obsluguja bo nowe) - gdy zacznie przewijac w dol to on przyklei sie do gory krawedzi (np. dla banerow z nawigacja) - jak zablokowane wiersze excela
+
+*/
+
+/* overflow: hidden - co nie miesci sie w boxie to zostanie ukryte
+   scroll - wewnatrz bedzie scrollbar i mozliwe przewijane
+   auto - przegladarka decyduje
+
+
+ */
+
+ /* #par:hover {}
+ pseudo klasa hover do elementu par - do zmiany np kolorou tla po najechaniu myszka  
+ :hover
+ :visited
+
+ a{ color:red;}
+ a:visited {color:green;}
+ a:active - ktora podstrona z menu jest właczona
+ */
+
+ /* pseudo klasa dla elementu o id dodajemy podzbior selektorow */
+/* #par p::first-letter {
+    color: #ff0000;
+    font-size: 36px;
+} */
+
+/* inline(1000), id(100), class(10), elementy(1)
+<body>
+    <header>
+        <div id="par">
+
+1      1    100 = 102
+
+<body>
+    <header id="naszheader">
+        <div id="par">
+  1    1+100   100 = 202 
+  
+  body header#naszheader #par {
+      color:blue;
+  ś}
+*/
+
+/* zalecane relatywne jednostki nie absolutne */
+/* przy width trzeba uwazac bo jestli jest padding i margin to czesc pojdzie na marginesy */
+/* em - 1em - wielkosc elementu x2 , 2em wielkosc elementu x2  standardowo chyba czcionka ma 16px*/
+
+/* css box-shadow: w praco w dol rozmycie kolor 
+box-shadow: 10px 10px 5px #000000 
+
+text-shadow: 2px 2px 3px black*/
+
