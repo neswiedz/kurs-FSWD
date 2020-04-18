@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="First project, company X web page"> <!-- do pominięcia, bo dzis google to omija -->
+    <title>This is first project</title>
+    <link rel="stylesheet" href="my-app.css">
+    <script src="my.js"></script> <!-- teraz nie zadziała bo sie ładuje zanim wczyta reszte strony i nie moze zrobic zmiany na elemencie id:title bo jeszcze on nie istnieje-->
+    <script src="https://kit.fontawesome.com/1e12985872.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header id="MainHeader">
+      <div id="HeaderContainer">
+        <a href="page1.html"><button>Community</button></a>
+        <a href="page1.html"><button>Portfolios</button></a>
+        <a href="page2.html"><button>Inspiration</button></a>
+        <a href="page3.html"><button>News</button></a>
+        <a href="page4.html"><button>Features</button></a>
+        <a href="page6.html"><button>Jobs</button></a>
+      </div>
+    </header>
+      
+    <section>
+      <article> 
+        <div class="main_baner">
+          <img src="img/main_baner.jpg">
+        </div>
+        
+        <div id="main_section">
+          <div id="main_section_left">
+            <div id="welcome">
+              <h2>Welcome to our website:</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quam lacus, findibus ac luctus sit amet, tempor ac mi. Vivamus at mauris mollis odio pulvinar rhoncus et vel sem. Pellentesque ultiricies dolor nisi, vel scelerisque nisl aliquam ut. Proin luctus, magna non facibus venesatis.  <a href="welcome_more.html">View more...</a></p>
+            </div>
+    
+            <div id="id">
+               <h2>About Us:</h2>
+               <p>Aliquam tristiwue, arcu a varius tristique, urna, risus facibius nibh, commodo cursus mi quam, nec purus. Donec convallis sagittis nisl, eu vehicula massa luctus id. Fuse cursus vitae libero rhoncus placerat. Proin eu consecetur ex. Aliquam interdum vel neque at vestibulum. <a href="/about_more.html">View more...</a></p>
+            </div>
+          </div>
+
+          <div id="main_section_right" >
+            <img src="img/avatar.png">
+            <div id="we_do">
+              <h2>What we do:</h2>  
+              <p>Etiam ante velit, hendrerit quis neque in, sagittis blandit augue. Donec tincidunt elit ac dolor finibus id sodales nisl feugiat
+                <br><a href="we_do_more.html">more...</a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+        
+        
+        <div id="pic">
+          <div class="graphics-square"><img src="img/pic1.jpg"></div>
+          <div class="graphics-square"><img src="img/pic2.jpg"></div>
+          <div class="graphics-square"><img src="img/pic3.jpg"></div>
+        </div>
+      </article>
+    </section>  
+
+    <footer id="mainFooter">
+      <div id="FooterContainer">
+        <div>
+          <h3><i class="fas fa-map-marker"></i> Ut tempus nisl non</h3>
+          <div>The command we will use for this is: mv. The mv command not only renames your file/folder, it can change the location of your renamed file if you wish to do so. If the file or folder you wish to rename is not in the current working directory then you need to provide the full file name.</div>
+        </div>
+        <div>
+          <h3><i class="fas fa-globe"></i> Sed elit dolor</h3>
+          <div>Open the Terminal application. Type the following command to rename foo folder to bar: mv foo bar. You can use full path too: mv /home/vivek/oldfolder /home/vivek/newfolder.</div>
+        </div>
+        <div>
+          <h3><i class="fas fa-lightbulb"></i> Quisque viverra</h3>
+          <div>To rename a file or directory, use the mv command. To rename a file with mv, the third word on the command line must end in the new filename. The above command renames the file original_name to new_name.</div>
+        </div>
+        <div>
+          <h3><i class="fas fa-tools"></i> Phasellus ac mauris</h3> 
+          <div>By far, the fastest way to rename a file is to select it and press Return. When you press the Return key, the entire name becomes highlighted. You can then just type your new name and press Return again.10 wrz 2017</div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
+
